@@ -1,0 +1,174 @@
+	<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Event Tickets Order Form</title>
+		<link rel="stylesheet" type="text/css" href="styles/normalize.css">
+		<link rel="stylesheet" type="text/css" href="styles/main.css">		
+	</head>
+
+	<body>
+		<div id="frame">
+			<header>
+				<img src="images/ornament-logo.png" alt="New Year Central Logo" style="width: 400px;">
+				<div id="header-line-1">New Year Central</div>
+				<div id="header-line-2">For the child in all of us!</div>
+			</header>
+
+			<!-- navigation starts -->
+			<nav id="nav_menu">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="about_us.html">About Us</a></li>
+					<li><a href="products.html">Our Products</a></li>
+					<li><a href="tickets_order_form.html" class="current">Event Tickets</a></li>
+					<li><a href="contact_us.html">Contact Us</a></li>
+				</ul>
+			</nav>
+
+			<aside>
+				<div class="sidebar-title">Products of The Week...</div>
+				<ul>
+					<li><a href="assets/products/berry-garland.html">Natural Holly Berry Garland, 5f - $74.99</a></li>
+					<li><a href="assets/products/artificial-red-berry-garland.html">Artificial Red Berry and White Edge Holly Leaf Christmas Garland, 5.5f - $38.99</a></li>
+					<li><a href="assets/products/christmas-berries-stems.html">Christmas Berries Red Stems Evergreen Pine Branches, 8pcs - $15.99</a></li>
+				</ul>
+			</aside>
+			
+			<main>
+				<h1>Order Event Tickets</h1>
+				<!-- The form starts here... -->
+
+				<form name="order_form" method="POST" action="place_order.html">
+					<div class="form-cont">
+					<div class="con1">
+					<h3 >Member Information</h3>
+					<div class="content">
+					<label for="email">E-mail:</label>
+					<input type="text" id="email" name="email"><br>
+
+					<label for="fname">First name:</label>
+					<input style="border: 1.5px solid rgb(236, 189, 57) ;" type="text" id="fname" name="fname"><br>
+
+					<label for="lname">Last name:</label>
+					<input style="border: 1.5px solid rgb(236, 189, 57) ;" type="text" id="lname" name="lname"><br>
+
+					<label for="address">Address:</label>
+					<input type="text" id="address" name="address"><br>
+
+					<label for="city">City:</label>
+					<input style="border: 1.5px solid rgb(236, 189, 57) ;" type="text" id="city" name="city"><br>
+
+					<label for="province">Province:</label>
+					<input style="border: 1.5px solid rgb(236, 189, 57) ;" placeholder="2-character code" type="text" maxlength="2" id="province" name="province"><br>
+
+					<label for="pc">Postal Code:</label>
+					<input style="border: 1.5px solid rgb(236, 189, 57) ;" placeholder="6 characters" maxlength="6" type="text" id="pc" name="pc"><br>
+
+					<label for="pn">Phone Number:</label>
+					<input type="tel" placeholder="999-999-9999"  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" id="pn" name="pn"><br>
+					</div>
+				</div>
+					<div class="con2">
+					<h3>Order Information</h3>
+					<div class="content">
+					<label for="event">Event:</label>
+					<select id="event" name="event">
+					<option value="cdc">Cookie Decoration Contest</option>
+					<option value="tdc">Tree Decoration Contest</option>
+					<option value="glra">Gift of Light Ride-Along</option>
+					<option value="bws">Breakfast with Santa</option>
+					</select><br>
+					
+
+					<label for="ordertype">Order type:</label>
+					<select id="ordertype" name="ordertype">
+					<option value="mp">Member Package</option>
+					<option value="dp">Donor Package</option>
+					<option value="st">Single Tickets</option>
+					</select><br>
+
+					<!-- <label style="margin-left: -20px;" for="quantity">Number of Tickets:</label>
+					<input type="number" placeholder="Number of single tickets" id="quantity" name="quantity" min="1" max="5">					
+					<br> -->
+					<label for="quantity">Number of Tickets:</label>
+					<input type="number" placeholder="Number of single tickets" id="quantity" name="quantity" min="1" max="50">					
+					<br>
+				</div>
+				</div>
+
+				<div class="con3 pay">
+					<h3>Payment Method</h3>
+					<div class="conten">
+					<input type="radio" id="billme" name="paymethod" value="billme">
+					<label for="html">Bill Me</label>
+					<input type="radio" id="creditcard" name="paymethod" value="creditcard">
+					<label for="creditcard">Credit Card</label><br>
+					
+				</div>
+				</div>
+
+				<div class="con4">
+
+					<h3>Credit Card Information:</h3>
+					<div class="content">
+					<label for="cardinfo">Card Type:</label>
+					<select id="cardinfo" name="cardinfo">
+					<option value="visa">Visa</option>
+					<option value="mastercard">Master Card</option>
+					<option value="discover">Discover</option>
+					</select><br>
+
+					<label for="cardnum">Card Number:</label>
+					<input style="border: 1.5px solid rgb(236, 189, 57) ;" type="number" placeholder="16 digits" id="cardnum" name="cardnum" min="1000000000000000" max="9999999999999999">					
+					<br>
+
+					<label for="month">Expiration Date:</label>
+					<select id="month" name="month">
+						<option value="January">January</option>
+						<option value="February">February</option>
+						<option value="March">March</option>
+						<option value="April">April</option>
+						<option value="May">May</option>
+						<option value="June">June</option>
+						<option value="July">July</option>
+						<option value="August">August</option>
+						<option value="September">September</option>
+						<option value="October">October</option>
+						<option value="November">November</option>
+						<option value="December">December</option>
+					</select>
+
+					<select id="year" name="year">
+						<option value="2021">2021</option>
+						<option value="2022">2022</option>
+						<option value="2023">2023</option>
+						<option value="2024">2024</option>
+						<option value="2025">2025</option>
+						<option value="2026">2026</option>
+						<option value="2027">2027</option>
+					</select><br>
+				</div>
+				</div>
+
+				<div class="con5">
+					<h3>Submit Your Order</h3>
+					<div class="content">
+					<div class="btns">
+					<input type="submit" value="Submit" />
+					<input type="reset" value="Reset Fields" />
+					</div>
+				</div>
+				</div>
+
+				</div>
+				  </form>
+				
+			</main>
+			
+			<footer>
+				<p>&copy; 2021 New Year Central. Created by Johnny White.</p>
+			</footer>
+		</div>
+	</body>
+</html>
